@@ -1,6 +1,9 @@
 <section class="phx-hero">
   <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
+
   <p>Peace of mind from prototype to production</p>
+
+  <div>User email: <%= @current_user.email %></div>
 
   <form phx-change="suggest" phx-submit="search">
     <input type="text" name="q" value="<%= @query %>" placeholder="Live dependency search" list="results" autocomplete="off"/>
